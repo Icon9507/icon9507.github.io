@@ -9,7 +9,7 @@ export default defineConfig({
   projectId: config.projectId,
   dataset: config.dataset,
   plugins: [structureTool({
-    structure: S => S.list().title('内容管理').items([
+    structure: S => S.list().id('content').title('内容管理').items([
       S.listItem().title('网站设置').id('siteSettings').child(
         S.document().schemaType('siteSettings').documentId('siteSettings').title('网站设置')
       ),
